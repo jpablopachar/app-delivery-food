@@ -4,23 +4,51 @@
     </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-    <div>
-        <swiper-container
-            [modules]="swiperModules"
-            [slidesPerView]="1.2"
-            [spaceBetween]="20"
-            [keyboard]="true"
-            [pagination]="{ clickable: true, dynamicBullets: true }"
-        >
-            <swiper-slide
-                ><img src="assets/images/logo.png" alt="Logo icon"
-            /></swiper-slide>
-            <swiper-slide
-                ><img src="assets/images/logo.png" alt="Logo icon"
-            /></swiper-slide>
-            <swiper-slide
-                ><img src="assets/images/logo.png" alt="Logo icon"
-            /></swiper-slide>
-        </swiper-container>
-    </div>
+    <ion-row class="borderBottom">
+        <div>
+            <swiper-container
+                [modules]="swiperModules"
+                [slidesPerView]="1.2"
+                [spaceBetween]="20"
+                [keyboard]="true"
+                [pagination]="{ clickable: true, dynamicBullets: true }"
+            >
+                <swiper-slide
+                    ><img src="assets/images/logo.png" alt="Logo icon"
+                /></swiper-slide>
+                <swiper-slide
+                    ><img src="assets/images/logo.png" alt="Logo icon"
+                /></swiper-slide>
+                <swiper-slide
+                    ><img src="assets/images/logo.png" alt="Logo icon"
+                /></swiper-slide>
+            </swiper-container>
+        </div>
+    </ion-row>
+    <ion-list>
+        <ion-list-header class="ion-margin-bottom">
+            <ion-label>
+                <h4>Restaurantes Nearby</h4>
+                <p>Descubre un único lugar para ti</p>
+            </ion-label>
+        </ion-list-header>
+        <ion-item lines="none">
+            <ion-thumbnail slot="start">
+                <img src="assets/images/logo.png" alt="Logo icon" />
+            </ion-thumbnail>
+            <ion-label>
+                <h4>Stayfit</h4>
+                <ion-text color="medium">
+                    <p class="pStyle">Italiano, Mexicano</p>
+                    <ion-text color="dark">
+                        <span> <ion-icon name="star"></ion-icon>5. </span>
+                        25 mins. $100 por dos
+                    </ion-text>
+                    <ion-text color="tertiary">
+                        <p class="distance">2.59 kms away</p>
+                    </ion-text>
+                </ion-text>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
